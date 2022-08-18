@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Letter from "./Letter";
 class Solution extends Component {
   // your code here...
   hint = "TEST";
@@ -7,12 +7,14 @@ class Solution extends Component {
     return (
       <div className="solution">
         <div id="solutionArray">
-          <span>_ </span>
-          <span>_ </span>
-          <span>_ </span>
-          <span>_ </span>
+          {this.props.word.split("").map((w) => (
+            <Letter
+              wLetter={this.props.letterStatus[w] ? w + " " : "_ "}
+              key={w}
+            />
+          ))}
         </div>
-        <div id="hint">{this.hint}</div>
+        <div id="hint">{this.props.hint}</div>
       </div>
     );
   }
