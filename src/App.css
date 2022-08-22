@@ -37,5 +37,15 @@
   }
 }
 .hide {
-  opacity: 50%;
+  text-decoration: line-through;
+  opacity: 80%;
+}
+.high-score {
+  color: green;
+}
+.medium-score {
+  color: yellow;
+}
+.low-score {
+  color: red;
 }
